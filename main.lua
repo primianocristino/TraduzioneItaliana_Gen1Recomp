@@ -92,6 +92,9 @@ return function(mod)
   loadScript("mods/nuzlocke.lua")
   loadScript("mods/example_mew_starter.lua")
   loadScript("mods/dramatic_shape.lua")
+  loadScript("mods/translation_debug.lua")
+  loadScript("mods/CryReplacementMod.lua")
+  loadScript("mods/MusicReplacementMod.lua")
   -- ---- ready event ---------------------------------------------------
   mod.events:on("game.ready", function()
     local total = 0
