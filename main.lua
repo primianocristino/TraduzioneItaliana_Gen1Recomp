@@ -89,8 +89,9 @@ return function(mod)
   end
 
   -- ---- caricamento mod esterne ---------------------------------------
-  loadScript("nuzlocke.lua")
-
+  loadScript("mods/nuzlocke.lua")
+  loadScript("mods/example_mew_starter.lua")
+  loadScript("mods/dramatic_shape.lua")
   -- ---- ready event ---------------------------------------------------
   mod.events:on("game.ready", function()
     local total = 0

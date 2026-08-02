@@ -407,11 +407,11 @@ return {
   ["TILT"] = "INCLINAZIONE",
   ["GBC FX"] = "EFFETTI GBC",
   ["ZOOM"] = "ZOOM",
-  ["VOID FILL"] = "RIEMPIMENTO SFONDO",
+  ["VOID FILL"] = "OGGETTI SFONDO",
   ["VIDEO MODE"] = "MODALITA' VIDEO",
   ["MAX FPS"] = "FPS MASSIMI",
   ["GAME SPEED"] = "VELOCITA' GIOCO",
-  ["%d INSTALLED"] = "%d INSTALLATI",
+  ["%d INSTALLED"] = "%d INSTALLATE",
   ["CONTROLS"] = "COMANDI",
   ["A blinding FLASH\nlights the area!"] = "Un abbagliante FLASH\nillumina la zona!",
   ["No SURFing here!"] = "Non si puo' usare SURF qui!",
@@ -559,4 +559,5 @@ return {
   ["NICKNAME?"] = "NICKNAME?",
   ["%s\ndied!"] = "%s\nè esausto!",
   ["All of your\nPOKéMON are dead..."] = "Tutti i tuoi\nPOKéMON sono esausti...",
+
 }
