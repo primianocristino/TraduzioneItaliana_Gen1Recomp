@@ -1,0 +1,9 @@
+# Status labels: the English behind each key in lang/status_labels.lua.
+# Reference only, and deliberately outside the mod: this
+# text comes out of the ROM, so it must not be shipped.
+
+"BRN"	"BRN"
+"FRZ"	"FRZ"
+"PAR"	"PAR"
+"PSN"	"PSN"
+"SLP"	"SLP"

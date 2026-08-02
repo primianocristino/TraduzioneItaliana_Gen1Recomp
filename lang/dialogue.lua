@@ -224,7 +224,7 @@ return {
   ["_CeladonMartRoofLittleGirlYayFreshWaterText"] = "Evviva!\nACQUA FRESCA!\12Grazie!\nPuoi prendere\11questo da parte\nmia!",
   ["_CeladonMartRoofLittleGirlYayLemonadeText"] = "Evviva!\nLIMONATA!\12Grazie!\nPuoi prendere\11questo da parte\nmia!",
   ["_CeladonMartRoofLittleGirlYaySodaPopText"] = "Evviva!\nBIBITA!\12Grazie!\nPuoi prendere\11questo da parte\nmia!",
-  ["_CeladonMartRoofSuperNerdText"] = "Mia sorella é\nun'allenat. ci\11credi o no. Ma é\ncosi' immatura che\11mi fa impazzire!",
+  ["_CeladonMartRoofSuperNerdText"] = "Mia sorella é\nun'allenatrice ci\11credi o no. Ma é\ncosi' immatura che\11mi fa impazzire!",
   ["_CeladonPokecenterBeautyText"] = "Ho pedalato in\nsalita sulla PISTA\11CICLABILE da\nFUCSIAPOLI!",
   ["_CeladonPokecenterGentlemanText"] = "Il FLAUTO POKé\nsveglia i POKéMON\11con un suono che\nsentono solo loro!",
   ["_CeruleanBadgeHouseBoulderBadgeText"] = "L'ATTACCO di tutti\ni POKéMON aumenta\11un pochino.\12Permette anche di\nusare FLASH ogni\11volta che lo\ndesideri.",
