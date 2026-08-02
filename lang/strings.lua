@@ -555,4 +555,8 @@ return {
   ["PA: Ding-dong!\nTime's up!"] = "ALTOPARLANTE: Dindon!\nTempo scaduto!",
   ["PA: Your SAFARI\nGAME is over!"] = "ALTOPARLANTE: Il GIOCO\nSAFARI é finito!",
   ["PA: You're out of\nSAFARI BALLs!"] = "ALTOPARLANTE: Finiti i\nSAFARI BALL!",
+
+  ["NICKNAME?"] = "NICKNAME?",
+  ["%s\ndied!"] = "%s\nè esausto!",
+  ["All of your\nPOKéMON are dead..."] = "Tutti i tuoi\nPOKéMON sono esausti...",
 }

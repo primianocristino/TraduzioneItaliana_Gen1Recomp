@@ -1,16 +1,5 @@
--- pokemon_red_italiano: a translation of the game into Italiano.
---
--- Nothing here is translated yet.  Every table under lang/ starts with
--- empty strings; fill one in and it takes effect on the next boot, and
--- anything still empty keeps rendering in English.  That means a
--- half-finished translation is always playable, so you can ship early and
--- fill the long tail in later.
---
--- Read TRANSLATING.md before the first edit; the font is the part people
--- get wrong.
+-- pokemon_red_italiano: a translation of the game into italian.
 return function(mod)
-  -- mod:read is the supported way into your own directory; the catalogs are
-  -- plain Lua tables, so read and run them rather than require()ing them.
   local function catalog(name)
     local rel = "lang/" .. name .. ".lua"
     local body = mod:read(rel)
@@ -28,7 +17,25 @@ return function(mod)
     return table_
   end
 
-  -- An empty value means "not translated yet", never "translate to blank".
+  local function loadScript(path)
+    local body = mod:read(path)
+    if not body then 
+      mod.log:warn("Impossibile leggere lo script: %s", path)
+      return 
+    end
+    local chunk, err = loadstring(body, path)
+    if not chunk then
+      mod.log:warn("%s ha un errore di sintassi: %s", path, tostring(err))
+      return
+    end
+    local ok, fn = pcall(chunk)
+    if ok and type(fn) == "function" then
+      fn(mod)
+    else
+      mod.log:warn("%s non ha restituito una funzione valida", path)
+    end
+  end
+
   local function each(name, apply)
     local n = 0
     for key, value in pairs(catalog(name)) do
@@ -41,13 +48,9 @@ return function(mod)
   end
 
   -- ---- glyphs -------------------------------------------------------
-  -- Register the sheet BEFORE anything asks for a glyph on it.  base is
-  -- the first code the page owns; 0x100 and up is free space above the
-  -- vanilla pages, so a new alphabet never collides with them.
   for id, page in pairs(catalog("font")) do
     mod.content.font:register(id, page)
   end
-  -- charmap: which byte sequence draws which code
   for seq, code in pairs(catalog("charmap")) do
     mod.content.font:register("charmap:" .. seq, { seq = seq, code = code })
   end
@@ -77,8 +80,6 @@ return function(mod)
   end)
 
   -- ---- name entry ---------------------------------------------------
-  -- The naming screen's letter grid.  Leave lang/naming.lua returning nil
-  -- to keep the English alphabet.
   local grid = catalog("naming")
   if grid.upper then
     mod.hooks:on("ui.naming.grid", function(base, ctx)
@@ -87,6 +88,10 @@ return function(mod)
     end)
   end
 
+  -- ---- caricamento mod esterne ---------------------------------------
+  loadScript("nuzlocke.lua")
+
+  -- ---- ready event ---------------------------------------------------
   mod.events:on("game.ready", function()
     local total = 0
     for _, n in pairs(counts) do total = total + n end
